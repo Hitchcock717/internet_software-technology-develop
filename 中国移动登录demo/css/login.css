@@ -1,0 +1,145 @@
+@charset "UTF-8";
+/* CSS Document */
+img{
+	width:auto;
+	height:auto;
+	max-width:100%;
+	max-height:100%;
+}
+
+/*----------登录页面--------*/
+.login_hd{
+	background:url("../images/logo.png") no-repeat;
+	float:left;
+	margin:20px 50px 0;
+	width:423px;
+	height:120px;
+}
+
+.login_computer{
+	background:url("../images/computer.png") no-repeat;
+	position:relative;
+	float:left;
+	margin:120px 500px 100px 0;
+	width:600px;
+	height:400px;
+	max-width:100%;
+	max-height:100%;
+}
+	
+#login_frame {
+    width: 500px;
+    height: 220px;
+    padding: 13px;
+ 
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -200px;
+    margin-top: -200px;
+ 
+    background-color:#B2F7FA;
+ 
+    border-radius: 10px;
+    text-align: center;
+}
+ 
+form p > * {
+    display: inline-block;
+    vertical-align: middle;
+}
+ 
+#image_logo {
+    margin-top: 22px;
+}
+ 
+.label_input {
+    font-size: 14px;
+    font-family: 宋体;
+ 	
+    width: 65px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+ 	text-shadow:5px 5px 5px #FFFFFF;
+    color: white;
+    background-color: #3CD8FF;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+ 
+.text_field {
+    width: 278px;
+    height: 28px;
+	box-shadow: 5px 5px 3px #000000;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: 0;
+}
+	
+.login_help{
+	float:right;
+	margin:6px -16px 10px;
+	width:100px;
+	height:30px;
+	font-size:15px;
+	color:#1E7BBD
+}
+	
+.login_help a{
+		text-decoration:none; 
+		color:#0101FF
+}
+	
+.login_form{
+		width:272px;
+		height:170px;
+		padding:27px 28px 0 16px;
+		color:#000101;
+		position:relative;
+}
+#btn_login {
+    font-size: 14px;
+    font-family: 宋体;
+ 
+    width: 120px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+ 
+    color: white;
+    background-color: #3BD9FF;
+    border-radius: 6px;
+    border: 0;
+ 
+    float: left;
+}
+ 
+#forget_pwd {
+    font-size: 15px;
+    color: red;
+    text-decoration: none;
+    position: relative;
+    float: right;
+    top: 5px;
+ 
+}
+ 
+#forget_pwd:hover {
+    color: blue;
+    text-decoration: underline;
+}
+ 
+#login_control {
+    padding: 0 28px;
+}
+
+#login_trademark{
+	background:url(../images/login_tm.png) no-repeat;
+	position:fixed;
+	margin:340px 40px 0;
+	width:300px;
+	height:150px;
+	font-size:15px;
+	text-align:center;
+}

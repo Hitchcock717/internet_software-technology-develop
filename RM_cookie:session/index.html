@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js"> 
+<head>
+    <meta charset="UTF-8" />
+    <title>Login and Registration Form with HTML5 and CSS3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Login and Registration Form with HTML5 and CSS3" />
+    <link rel="shortcut icon" href="images/logo.png" /> 
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" /><link rel="stylesheet" type="text/css" href="css/animate-custom.css" />
+	
+</head>
+ 	<body>
+        <div class="container">
+            <!-- Codrops top bar -->
+            <div class="codrops-top">
+                <a href="">
+                    <strong>&laquo; 亲爱的北京大学用户： </strong>欢迎来到日程管理页面
+                </a>
+                <span class="right">
+				<a href="">
+                        <strong>您好，请登录</strong>
+                    </a>
+                </span>
+                <div class="clr"></div>
+            </div>
+            <header>
+                <h1>北京大学软件与微电子学院<span>日程管理系统</span></h1>
+            </header>
+            <section>				
+                <div id="container_demo" >
+                    <a class="hiddenanchor" id="toregister"></a>
+                    <a class="hiddenanchor" id="tologin"></a>
+                    <div id="wrapper">
+                        <div id="login" class="animate form">
+                            <form  action="login_process.php" method="post"> 
+                                <h1>登 录</h1> 
+                                <p> 
+                                    <label for="username" class="uname" data-icon="u" > ID/用户名/邮箱</label>
+                                    <input id="username" name="username" required="required" type="text" placeholder="myusername or mymail@mail.com"/>
+                                </p>
+                                <p> 
+                                    <label for="password" class="youpasswd" data-icon="p"> 密码 </label>
+                                    <input id="password" name="password" required="required" type="password" placeholder="eg. X8df!90EO" /> 
+                                </p>
+                                <p class="keeplogin"> 
+									<input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" /> 
+									<label for="loginkeeping">记住我的登录状态</label>
+								</p>
+                                <p class="login button">
+									<a href="task.html"></a>
+									<input type="submit" value="Login" onClick="location.href='task.html'">
+									<!--add switch link here-->
+								</p>
+                                <p class="change_link">
+									还未注册？
+									<a href="#toregister" class="to_register">注册账号</a>
+								</p>
+                            </form>
+                        </div>
+
+                        <div id="register" class="animate form">
+                            <form  action="register.php" method="post" enctype="multipart/form-data"> 
+                                <h1> 注 册 </h1> 
+                                <p> 
+                                    <label for="usernamesignup" class="uname" data-icon="u">用户名</label>
+                                    <input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="mysuperusername690" />
+                                </p>
+                                <p> 
+                                    <label for="emailsignup" class="youmail" data-icon="e" > 邮箱</label>
+                                    <input id="emailsignup" name="emailsignup" required="required" type="email" placeholder="mysupermail@mail.com"/> 
+                                </p>
+                                <p> 
+                                    <label for="passwordsignup" class="youpasswd" data-icon="p">密码</label>
+                                    <input id="passwordsignup" name="passwordsignup" required="required" type="password" placeholder="eg. X8df!90EO"/>
+                                </p>
+                                <p> 
+                                    <label for="passwordsignup_confirm" class="youpasswd" data-icon="p">确认密码</label>
+                                    <input id="passwordsignup_confirm" name="passwordsignup_confirm" required="required" type="password" placeholder="eg. X8df!90EO"/>
+                                </p>
+                                <p class="signin button"> 
+									<a href="index.html"></a>
+									<input type="submit" value="Sign up"/> 
+								</p>
+                                <p class="change_link">  
+									已经注册？
+									<a href="#tologin" class="to_register"> 去登录 </a>
+								</p>
+                            </form>
+                        </div>	
+                    </div>
+                </div>  
+            </section>
+        </div>
+    </body>
+</html>

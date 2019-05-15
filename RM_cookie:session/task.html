@@ -1,0 +1,190 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>TaskManager</title>
+<link rel="shortcut icon" href="images/logo.png" /> 
+<link rel="stylesheet" type="text/css" href="css/task.css" />
+<link rel="stylesheet" type="text/css" href="glyphicon.css"/>
+</head>
+
+<body>
+<div class="container-fluid">
+    <div class="row fullScreen">
+        <div class="col-left sidebar fullScreen" id="sidebar">
+
+            <div style="padding-top: 20px" class="text-center">
+            <span class="glyphicon glyphicon-fire" aria-hidden="true" style="color:#EFEFEF; font-size: 25px;"> </span>
+                <span style="color:#AFAFAF;text-align: center; font-size: 30px;" >日程管理</span>
+            </div>
+
+            <div style="padding-top: 30px">
+                <p style="font-size: 18px; color: #EFEFEF;">
+                    <span class=" glyphicon glyphicon-user" aria-hidden="true" style="color:#AFAFAF; font-size: 17px;">用户名: Alfred Hitchcock</span>
+                    <span style="color:#AFAFAF; font-size: 20px;" id="userName"></span>
+                </p>
+            </div>
+
+            <p class="text-center" style="font-size: 20px; padding-top: 20px; color:#CFCFCF;">
+                管理列表
+            </p>
+            <hr>
+
+            <div id="containerList" >
+                <ul class="nav-li" style="font-size: 20px;" id="containerBar">
+					<li>所有任务</li>
+					<li>新建任务列表1</li>
+					<li>新建任务列表2</li>
+					<li>新建任务列表3</li>
+                </ul>
+            </div>
+		  	
+			<div class="row" style="padding-top: 60px;">
+                <div class="col-add">
+                    <button class="btn btn-add" style="width: 80px;" onclick="addContainer()">添加</button>
+                </div>
+                <div class="col-del">
+                    <button class="btn btn-del" style="width: 80px;" onclick="deleteContainer()">删除</button>
+                </div>
+            </div>
+
+            <div class="footer">
+                <span class="glyphicon glyphicon-copyright-mark" aria-hidden="true"></span>
+                copyright©Peking University
+            </div>
+			
+			<div class="main">
+        		<div class="col-ttl">
+            		<div class="row Space">
+                		<ul class="nav nav-tabs navTitle">
+                    		<li class="glyphicon glyphicon-fire" aria-hidden="true" style="color:#EFEFEF; font-size: 25px;"><a href="taskList.html" >任务列表</a></li>
+                    		<li class="glyphicon glyphicon-fire" aria-hidden="true" style="color:#EFEFEF; font-size: 25px;"><a href="addTask.html" >添加任务</a></li>
+                    		<li class="glyphicon glyphicon-fire" aria-hidden="true" style="color:#EFEFEF; font-size: 25px;"><a href="index.html">退出登录</a></li>
+                		</ul>
+            		</div>
+				</div>
+           			<br>
+
+            		<div class="row">
+					<br>
+					</div>
+                	<div class="col-md-12">
+                    	<span class="glyphicon glyphicon-tasks" aria-hidden="true" style="font-size: 160%">  </span>
+                    	<span style="font-size: 180%">任务列表</span>
+                    	<br>
+                    	<table class="Modbus" id="listTable" style="font-size: 135%;">
+                        	<thead>
+							<tr>
+                            	<th>任务序号</th>
+                            	<th>任务分类</th>
+                            	<th>具体事项</th>
+                            	<th>截止日期</th>
+                            	<th>剩余时间</th>
+                            	<th>备注</th>
+                        	</tr>
+							</thead>
+							<tr>
+								<td class="item1">1</td>
+								<td class="item2">0x01</td>
+								<td class="item3">unsigned int</td>
+								<td class="item4">0x0001</td>
+								<td class="item5">0x0001</td>
+								<td class="item6">null</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>0x02</td>
+								<td>unsigned int</td>
+								<td>0x0002</td>
+								<td>0x0002</td>
+								<td>null</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>0x03</td>
+								<td>unsigned int</td>
+								<td>0x0003</td>
+								<td>0x0003</td>
+								<td>null</td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td>0x04</td>
+								<td>unsigned int</td>
+								<td>0x0004</td>
+								<td>0x0004</td>
+								<td>null</td>
+							</tr>
+							<tr>
+								<td>5</td>
+								<td>0x05</td>
+								<td>unsigned int</td>
+								<td>0x0005</td>
+								<td>0x0005</td>
+								<td>null</td>
+							</tr>
+							<tr>
+								<td>6</td>
+								<td>0x06</td>
+								<td>double</td>
+								<td>0x0006</td>
+								<td>0x0006</td>
+								<td>null</td>
+							</tr>
+							<tr>
+								<td>7</td>
+								<td>0x08</td>
+								<td>double</td>
+								<td>0x0007</td>
+								<td>0x0007</td>
+								<td>null</td>
+							</tr>
+							<tr>
+								<td>8</td>
+								<td>0x10</td>
+								<td>double</td>
+								<td>0x0008</td>
+								<td>0x0008</td>
+								<td>null</td>
+							</tr>
+							<tr>
+								<td>9</td>
+								<td>0x12</td>
+								<td>double</td>
+								<td>0x0009</td>
+								<td>0x0009</td>
+								<td>null</td>
+							</tr>
+							<tr>
+								<td>10</td>
+								<td>0x14</td>
+								<td>double</td>
+								<td>0x0010</td>
+								<td>0x0010</td>
+								<td>null</td>
+							</tr>
+                    	</table>
+                    	<br>
+					</div>
+
+                    <div class="col-md">
+                        <button class="btn-mod" style="font-size: 120%;" id="modifyButton"
+                                title="Waring" data-container="body" data-toggle="popover" data-placement="bottom"
+                                data-content="Hasn't select line!"
+                                onclick="modify()">
+                            点击修改
+                        </button>
+                    </div>
+
+                    <div class="col-del2">
+                        <button class="btn-del2" style="font-size: 120%" id="deleteButton"
+                                onclick="deleteButton()">
+                             点击删除
+                        </button>
+                    </div>
+    		</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

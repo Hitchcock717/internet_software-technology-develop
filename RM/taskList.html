@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>taskList</title>
+    <link rel="stylesheet" href="css/addtask.css"/>
+    <link rel="stylesheet" href="css/routine.css"/>
+	<link rel="stylesheet" href="glyphicon.css"/>
+</head>
+<body>
+
+<div class="container-fluid" >
+
+    <div class="row">
+        <br>
+        <div class="col-md-12">
+            <div class="row Space">
+                <ul class="nav nav-tabs navTitle">
+                    <li class="active"><a href="taskList.html" >任务列表</a></li>
+                    <li ><a href="addTask.html" >添加任务</a></li>
+                    <li ><a href="#">填写任务</a></li>
+                </ul>
+            </div>
+
+
+            <br>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <span class="glyphicon glyphicon-tasks" aria-hidden="true" style="font-size: 160%">  </span>
+                    <span style="font-size: 180%">任务表格</span>
+
+                    <br>
+                    <br>
+                    <table class="table table-hover text-center " id="listTable" style="font-size: 135%;">
+                        <thead>
+						<tr>
+                            <th class="text-center">任务序号</th>
+                            <th class="text-center">任务分类</th>
+                            <th class="text-center">任务描述</th>
+                            <th class="text-center">截止日期</th>
+                            <th class="text-center">剩余时间</th>
+                            <th class="text-center">备注</th>
+                        </tr>
+						</thead>
+						<tr>
+								<td class="item1">1</td>
+								<td class="item2">0x01</td>
+								<td class="item3">unsigned int</td>
+								<td class="item4">0x0001</td>
+								<td class="item5">0x0001</td>
+								<td class="item6">null</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>0x02</td>
+								<td>unsigned int</td>
+								<td>0x0002</td>
+								<td>0x0002</td>
+								<td>null</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>0x03</td>
+								<td>unsigned int</td>
+								<td>0x0003</td>
+								<td>0x0003</td>
+								<td>null</td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td>0x04</td>
+								<td>unsigned int</td>
+								<td>0x0004</td>
+								<td>0x0004</td>
+								<td>null</td>
+							</tr>
+							<tr>
+								<td>5</td>
+								<td>0x05</td>
+								<td>unsigned int</td>
+								<td>0x0005</td>
+								<td>0x0005</td>
+								<td>null</td>
+							</tr>
+                    </table>
+
+                    <br>
+
+                    <div class="col-md-2">
+                        <button class="btn btn-primary my-button" style="font-size: 120%;" id="modifyButton"
+                                title="Waring" data-container="body" data-toggle="popover" data-placement="bottom"
+                                data-content="Hasn't select line!"
+                                onclick="modify()">
+                            点击修改
+                        </button>
+                    </div>
+
+                    <div class="col-md-2">
+                        <button class="btn btn-primary my-button " style="font-size: 120%" id="deleteButton"
+                                onclick="deleteButton()">
+                            点击删除
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+            <br>
+
+
+        </div>
+
+    </div>
+
+
+</div>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">注意事项</h4>
+            </div>
+            <div class="modal-body" id="tipText">在这里添加一些文本</div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">好的</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel2">注意事项</h4>
+            </div>
+            <div class="modal-body" id="tipText2">在这里添加一些文本</div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" onclick="deleteRow()">好的</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+<div class="modal fade" id="modifyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="modifyModalLabel">修改任务 </h4>
+            </div>
+            <div class="modal-body" id="modifyTipText">
+                <div class="container">
+                    <div class="row">
+                        <form class="form-horizontal " action="../php/addTask.php" method="post" >
+                            <div class="form-group" id="inputDDLGroup">
+                                <label class="col-sm-1 control-label ">任务日期</label>
+                                <div class="col-sm-4">
+                                    <input type="date" name="taskDDL" id="inputDDL" class="form-control myInput"  title="DeadLine">
+                                </div>
+                            </div>
+
+                            <div class="form-group" id="inputTimeGroup">
+                                <label class="col-sm-1 control-label ">任务时长</label>
+                                <div class="col-sm-4">
+                                    <input type="time" name="taskTime" id="inputTime" class="form-control myInput"  title="DeadLine">
+                                </div>
+                            </div>
+
+                            <div class="form-group" id="inputNameGroup">
+                                <label class="col-sm-1 control-label ">任务名称</label>
+                                <div class="col-sm-4">
+                                    <input type="text" name="taskName" id="inputTaskName" class="form-control myInput"  title="taskName">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label ">任务描述</label>
+                                <div class="col-sm-4">
+                                    <textarea name="taskDescription" class="form-control myText" id="inputDescription" rows="10" title="Description"></textarea>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="modifyDatabase()">修改</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+
+</body>
+</html>

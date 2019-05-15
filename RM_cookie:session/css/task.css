@@ -1,0 +1,182 @@
+@charset "UTF-8";
+/* CSS Document */
+.container-fluid {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.sidebar{
+	position:absolute;
+	top:0;
+	bottom:0;
+	width:300px;
+	padding:15px 15px 600px;
+	line-height:1.5;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	margin-bottom:-10000px
+}
+.sidebar{
+	background-color:#27272D;
+}
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.col-left,.col-mod,.col-del2{
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+@media (min-width: 1200px) {
+.col-left{
+	float: left;
+	width: 16.66666667%;
+	}
+}
+.col-add,.col-del,.col-mod,.col-del2{
+	float: left;
+	width:50%
+}
+
+.text-center {
+  text-align: center;
+}
+.main{
+	position:absolute;/*--使div位置独立--*/
+	left:260px;
+	top:60px;
+	width:1150px;
+	margin-bottom:-10000px
+}
+.nav {
+  padding-left: 5px;
+  margin-bottom: 0px;
+  list-style: none;
+}
+.nav-tabs {
+  border-bottom: 2px solid #ddd;
+}
+.nav-li{
+	text-align: left;
+	color:#F4F4F4;
+}
+.table {
+  background-color: transparent;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+  border-spacing: 0;
+  box-shadow: 0 1px 1px #CCC;
+  text-align: center;
+}
+.Modbus
+{
+	border:solid #ccc 1px;                       		 /*设置表格外边框*/
+	border-radius: 10px;                                /*设置表格外边框圆角*/
+}
+ 
+.Modbus td,.Modbus th
+{
+	border-right:solid #ccc 1px;                        /*设置表格单元格外边框，只设置右下边框*/
+	border-bottom: solid #ccc 1px;
+	padding: 10px;                                      /*设置单元格内边距，单元格内容显得不拥挤*/
+	text-align: center;                                 /*单元格内容居中*/
+}
+ 
+.Modbus thead
+{
+	background-color: #dce9f9;                          /*设置表头背景色*/
+}
+ 
+.Modbus td:last-child,.Modbus th:last-child
+{
+	border-right: none;                                 /*去掉表格每一行最后一列的右边框*/
+}
+ 
+.Modbus tr:last-child td 
+{
+	border-bottom: none;                                /*去掉最后一行中所有单元格的下边框*/
+}
+ 
+/*单元格设置圆角*/
+.Modbus th:first-child
+{
+	border-radius: 10px 0 0 0;
+}
+ 
+.Modbus th:last-child
+{
+	border-radius: 0 10px 0 0;
+}
+ 
+.Modbus tr:last-child td:first-child
+{
+	border-radius: 0 0 0 10px;
+}
+ 
+.Modbus tr:last-child td:last-child
+{
+	border-radius: 0 0 10px 0;
+}
+ 
+/*鼠标移动至单元格，单元格高亮显示*/
+.Modbus tr:hover
+{
+	background: #fbf8e9;
+}
+ 
+/*分别设置每一行中单元格的宽度*/
+.item1
+{
+	width: 10%;
+}
+.item2
+{
+	width: 15%;
+}
+.item3
+{
+	width: 40%;
+}
+.item4
+{
+	width: 10%;
+}
+.item5
+{
+	width: 10%;
+}
+.item6
+{
+	width: 15%
+}
+.btn-add,.btn-del{
+  color: #F0F0F0;
+  background-color: #2e6da4;
+  border-color: #141414;
+  font-size:120%;
+}
+.btn-add{
+	float:left;
+	margin-left:35px;
+}
+.footer{
+    position: absolute;
+    bottom: 0;
+    color: #CFCFCF;
+    padding-bottom: 10px;
+	font-size:15px;
+}
+.btn-mod,.btn-del2{
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+}
+.btn-mod{
+	float:left;
+	margin-left:20px;
+}

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>login_draft</title> <!--css、js说明-->
+	
+	<link rel="stylesheet" type="text/css" href="css/login.css"/>
+	<script type="text/javascript" src="login.js"></script>
+<style>/*----------全局样式--------*/
+	body{
+    background-image: url("images/Layer.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+</style>
+</head>
+
+<body>
+	
+<!--构建整个登录框架-->
+<div id="container">
+	<div class="login">
+		<div class="login_hd">
+		</div>
+		<div class="login_computer">
+		</div>
+		<div id="login_frame"> 
+	
+			<p id="image_logo"><img src="images/login_logo.png" alt="login_logo" width="350" height="80"></p> <!--放置logo图-->
+	
+	
+			<form method="post" action="../login.js">
+	
+			
+			<p><label class="label_input">用户名</label><input type="text" id="username" class="text_field"  placeholder="昵称/手机号/邮箱"/></p> <!--设置用户名标签-->
+			<p><label class="label_input">密码</label><input type="text" id="password" class="text_field"  placeholder="密码"/></p> <!--设置登录密码标签-->
+
+		<div class="login_help">
+			<a href="#">使用帮助</a>
+		</div>
+				<form action="#" method="post" class="login_form">
+		<div id="login_control"> <!--设置登录控制区块-->
+			<input type="button" id="btn_login" value="登录" onclick="login();"/> <!--设置登录按钮触发效果-->
+			<a id="forget_pwd" href="forget_pwd.html">忘记密码</a> <!--设置忘记密码超链-->
+		</div>
+		<div id="login_trademark">
+		</div>
+				</form>
+			</form>
+		</div>
+	</div>
+</div>
+</body>
+</html>
+
